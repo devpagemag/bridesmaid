@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Will you be my bridesmaid?</title>
+<meta name="description" content="A bridesmaid proposal for the June 13, 2027 wedding.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#1F1511; --bg2:#140D0A; --paper:#3B2A24; --ink:#F5EBD8; --muted:#CDB99D;
+  --blue:#8FB4D1; --blue-ink:#14232F; --sage:#9CCBA6; --gold:#D2B886; --line:#5A443A;
+  --display:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;min-height:100svh;background:radial-gradient(120% 90% at 50% 0%,#4B362D 0%,var(--bg) 55%,var(--bg2) 100%);color:var(--ink);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px}
+[hidden]{display:none!important}
+.stage{min-height:calc(100svh - 48px);display:grid;place-items:center}
+.card{position:relative;width:100%;max-width:620px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(34px,7vw,60px) clamp(22px,6vw,56px);text-align:center;box-shadow:0 22px 60px rgba(0,0,0,.5);overflow:hidden;background:linear-gradient(180deg,#43312A 0%,#37271F 100%)}
+.card::before{content:"";position:absolute;inset:10px;border:1px solid var(--gold);border-radius:15px;opacity:.5;pointer-events:none;z-index:2}
+.bouquet{display:block;width:230px;max-width:68%;height:auto;margin:0 auto 6px}
+.card>*{position:relative;z-index:1}
+.card>.corner{position:absolute;z-index:0;bottom:-34px;width:78px;height:auto;opacity:.34;pointer-events:none}
+.corner.l{left:-10px;transform:rotate(18deg);transform-origin:bottom center}
+.corner.r{right:-10px;transform:scaleX(-1) rotate(18deg);transform-origin:bottom center}
+.eyebrow{margin:0 0 22px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.dear{margin:0 0 4px;font-family:var(--display);font-size:clamp(22px,4.5vw,28px);font-style:italic;color:var(--muted);overflow-wrap:anywhere}
+h1,h2{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,9vw,64px);color:var(--ink);text-shadow:0 2px 18px rgba(0,0,0,.35)}
+h2{font-size:clamp(38px,8vw,56px);color:var(--blue)}
+.msg{margin:20px auto 0;max-width:42ch;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:14px 18px;justify-content:center;align-items:center;margin-top:32px}
+button{font:inherit;cursor:pointer}
+.yes{font-weight:600;font-size:18px;padding:15px 34px;border-radius:99px;border:0;background:var(--blue);color:var(--blue-ink);box-shadow:0 8px 22px rgba(0,0,0,.42);transform:scale(var(--g,1));transition:transform .2s ease,box-shadow .2s ease}
+.yes:hover{box-shadow:0 0 0 4px rgba(143,180,209,.28),0 10px 26px rgba(0,0,0,.5)}
+.noholder{display:inline-block}
+.no{font-weight:600;font-size:16px;padding:13px 28px;border-radius:99px;border:1.5px solid var(--gold);background:transparent;color:var(--ink);transform-origin:top left;transform:scale(var(--s,1))}
+.no.flying{position:fixed;z-index:20;margin:0;transition:left .28s cubic-bezier(.3,1.35,.5,1),top .28s cubic-bezier(.3,1.35,.5,1),transform .2s ease}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.note{min-height:1.6em;margin:22px 0 0;font-size:14px;color:var(--sage);font-weight:500}
+.from{margin:18px 0 0;font-family:var(--display);font-style:italic;font-size:22px;color:var(--ink);overflow-wrap:anywhere}
+.thanks p{max-width:40ch;margin:16px auto 0;color:var(--muted)}
+.thanks .when{font-family:var(--display);font-size:24px;color:var(--ink);font-style:italic}
+.thanks:focus{outline:none}
+#confetti{position:fixed;left:0;top:0;pointer-events:none;z-index:40}
+@media (prefers-reduced-motion:no-preference){
+  .card{animation:rise .7s ease backwards}
+  .note{transition:opacity .4s ease}
+  @keyframes rise{from{opacity:0}to{opacity:1}}
+}
+@media (prefers-reduced-motion:reduce){.no.flying,.yes{transition:none}}
+</style>
+</head>
+<body>
+<main class="stage">
+  <article class="card">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="lily">
+          <path d="M0 0 C2 -30 -2 -60 0 -88" fill="none" stroke="#7FAE8A" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M0 -80 C-26 -88 -34 -122 -14 -150 C-4 -160 22 -142 20 -112 C19 -96 10 -84 0 -80 Z" fill="#F8EFDD"/>
+          <path d="M-14 -150 C-6 -134 6 -118 2 -82 C-10 -86 -22 -96 -24 -114 C-25 -130 -21 -142 -14 -150 Z" fill="#E3D1AE"/>
+          <ellipse cx="-1" cy="-112" rx="3.6" ry="15" transform="rotate(-6 -1 -112)" fill="#D9AC4C"/>
+        </g>
+        <g id="leaf"><path d="M0 0 C-30 -20 -40 -52 -26 -76 C-10 -56 0 -30 0 0 Z" fill="#5B8A67"/><path d="M0 0 C-14 -26 -20 -48 -26 -76" fill="none" stroke="#7FAE8A" stroke-width="1" opacity=".7"/></g>
+      </defs>
+    </svg>
+    <svg class="bouquet" viewBox="0 0 260 190" role="img" aria-label="Three white calla lilies">
+      <g transform="translate(130 186)">
+        <use href="#leaf" transform="translate(-4 0) rotate(-10) scale(1.1)"/>
+        <use href="#leaf" transform="translate(4 0) scale(-1.05 1.05) rotate(-6)"/>
+        <use href="#lily" transform="rotate(-24) scale(.86)"/>
+        <use href="#lily" transform="rotate(24) scale(.86)"/>
+        <use href="#lily" transform="scale(1.04)"/>
+      </g>
+      <path d="M112 150 C122 160 138 160 148 150" fill="none" stroke="#D2B886" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+    <p class="eyebrow">Sunday, June 13, 2027</p>
+    <div id="ask">
+      <p class="dear" id="dear">Dear friend,</p>
+      <h1>Will you be my bridesmaid?</h1>
+      <p class="msg">You have been part of so many chapters of my life. I would be so happy to have you standing beside me on the day I get married.</p>
+      <div class="btns" id="btns">
+        <button class="yes" id="yes" type="button">Yes, of course</button>
+        <span class="noholder" id="noholder"><button class="no" id="no" type="button">No</button></span>
+      </div>
+      <p class="note" id="note" aria-live="polite"></p>
+      <p class="from" id="from"></p>
+    </div>
+    <svg class="corner l" viewBox="-60 -170 120 180" aria-hidden="true" focusable="false"><use href="#lily"/></svg>
+    <svg class="corner r" viewBox="-60 -170 120 180" aria-hidden="true" focusable="false"><use href="#lily"/></svg>
+    <div class="thanks" id="thanks" hidden tabindex="-1">
+      <h2>You said yes!</h2>
+      <p class="when">June 13, 2027</p>
+      <p>Thank you. I can’t wait to celebrate with you. More details are on the way.</p>
+    </div>
+  </article>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s);};
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var qs=new URLSearchParams(location.search),hash='';
+try{hash=decodeURIComponent(location.hash.slice(1)).replace(/[-_+]+/g,' ');}catch(e){}
+var to=(qs.get('to')||hash||'').trim().slice(0,40);
+var from=(qs.get('from')||'').trim().slice(0,40);
+$('#dear').textContent='Dear '+(to||'friend')+',';
+if(from){$('#from').textContent='With all my love, '+from;}else{$('#from').hidden=true;}
+
+var yes=$('#yes'),no=$('#no'),holder=$('#noholder'),note=$('#note');
+var tries=0,placed=false,done=false;
+var TAUNTS=['Too slow!','Nice try.','Whoops, missed.','The No button is feeling shy.','Are you sure about that?','Almost had it!','It really does not want to be clicked.','You could just say yes...','Still no luck? Yes is right there.','This could take a while.'];
+var LAST='Okay, the No button has left the building. Please choose Yes.';
+
+setTimeout(function(){if(tries===0&&!done){note.textContent='Psst. Go on, try clicking No. Just for fun.';}},3500);
+
+function flee(ev){
+  if(done)return;
+  if(ev&&ev.cancelable)ev.preventDefault();
+  var nr=no.getBoundingClientRect(),yr;
+  if(!placed){
+    no.classList.add('flying');no.style.left=nr.left+'px';no.style.top=nr.top+'px';
+    placed=true;void no.offsetWidth;
+  }
+  yr=yes.getBoundingClientRect();
+  var vw=document.documentElement.clientWidth,vh=window.innerHeight,m=12,w=nr.width,h=nr.height;
+  var maxX=Math.max(m,vw-w-m),maxY=Math.max(m,vh-h-m),best=null,fallback=null;
+  for(var i=0;i<60;i++){
+    var x=m+Math.random()*(maxX-m),y=m+Math.random()*(maxY-m);
+    var hitsYes=x<yr.right+24&&x+w>yr.left-24&&y<yr.bottom+24&&y+h>yr.top-24;
+    if(hitsYes)continue;
+    if(!fallback)fallback={x:x,y:y};
+    var far=Math.hypot(x-nr.left,y-nr.top)>Math.min(vw,vh)*0.3;
+    if(far){best={x:x,y:y};break;}
+  }
+  best=best||fallback||{x:m,y:m};
+  no.style.left=best.x+'px';no.style.top=best.y+'px';
+  tries++;
+  yes.style.setProperty('--g',Math.min(1+tries*0.03,1.22));
+  no.style.setProperty('--s',Math.max(1-tries*0.025,0.72));
+  note.textContent=tries>=12?LAST:TAUNTS[(tries-1)%TAUNTS.length];
+}
+['pointerenter','pointerdown','focus','click'].forEach(function(t){no.addEventListener(t,flee);});
+addEventListener('resize',function(){
+  if(!placed||done)return;
+  var r=no.getBoundingClientRect(),vw=document.documentElement.clientWidth,vh=window.innerHeight;
+  no.style.left=Math.max(12,Math.min(r.left,vw-r.width-12))+'px';
+  no.style.top=Math.max(12,Math.min(r.top,vh-r.height-12))+'px';
+});
+
+function confetti(){
+  if(reduce)return;
+  var cv=$('#confetti'),ctx=cv.getContext('2d'),dpr=window.devicePixelRatio||1,W=window.innerWidth,H=window.innerHeight;
+  cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';ctx.scale(dpr,dpr);
+  var cols=['#8FB4D1','#6C93AD','#9CCBA6','#D2B886','#F3E6CF','#FBF6EB'],ps=[],i;
+  for(i=0;i<150;i++){ps.push({x:W/2+(Math.random()-.5)*W*.3,y:H*.55,vx:(Math.random()-.5)*14,vy:-Math.random()*16-4,s:5+Math.random()*6,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:cols[i%cols.length]});}
+  var t0=performance.now();
+  (function tick(now){
+    var el=now-t0;ctx.clearRect(0,0,W,H);
+    ps.forEach(function(p){
+      p.vy+=.3;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;ctx.globalAlpha=Math.max(0,1-el/4200);
+      ctx.fillRect(-p.s/2,-p.s/3,p.s,p.s*.6);ctx.restore();
+    });
+    if(el<4200){requestAnimationFrame(tick);}else{ctx.clearRect(0,0,W,H);}
+  })(t0);
+}
+
+var NOTIFY_KEY='PASTE_YOUR_ACCESS_KEY_HERE';
+var notified=false;
+function notify(){
+  if(notified||!NOTIFY_KEY||NOTIFY_KEY.indexOf('PASTE')===0)return;
+  notified=true;
+  var who=to||'A bridesmaid';
+  try{
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},keepalive:true,
+      body:JSON.stringify({access_key:NOTIFY_KEY,subject:who+' said YES to being your bridesmaid!',from_name:'Bridesmaid card',name:who,
+        message:who+' clicked Yes on your bridesmaid card at '+new Date().toLocaleString()+(tries?' (after '+tries+' attempts to click No).':'.')})
+    }).catch(function(){});
+  }catch(e){}
+}
+
+yes.addEventListener('click',function(){
+  done=true;notify();
+  $('#ask').hidden=true;no.hidden=true;holder.hidden=true;
+  var t=$('#thanks');t.hidden=false;t.focus({preventScroll:true});
+  window.scrollTo(0,0);
+  confetti();
+});
+})();
+</script>
+</body>
+</html>
